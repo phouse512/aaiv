@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AAIV Attendance</title>
+    <meta name="description" content="AAIV Attendance">
+    <meta name="author" content="HouseWD">
+    <link rel="stylesheet" type="text/css" href="project.css" />
+    <script src="jquery2.js"></script>
+    <script src="jquery.customSelect.min.js"></script>
+    <script>
+        window.onload = function(){
+            var $cs = $('.styled').customSelect();  
+        };
+        $("#button").click(function() {
+                alert('CLICK!');
+            });
+
+    </script>
+</head>
+<body>
+        <form id="slick-login">
+            <label for="firstname">firstname</label><input type="text" name="firstname" class="placeholder" placeholder="first name..">
+            <label for="lastname">lastname</label><input type="text" name="lastname" class="placeholder" placeholder="last name..">
+            <label for="email">username</label><input type="text" name="email" class="placeholder" placeholder="myemail@u.north..">
+            <label for="dorm">dorm</label><input type="text" name="dorm" class="placeholder" placeholder="dorm..">         
+            <select class="styled">
+                <option>choose year..</option>
+                <option>Freshman</option>
+                <option>Sophomore</option>
+                <option>Junior</option>
+                <option>Senior</option>
+                <option>Other</option>
+            </select>
+            <input id="button" type="submit" value="Submit">
+        </form>
+    <div id="error-message-wrapper">
+        <div id="error-first" class="error-messages">
+            <p>Please enter your first name</p>
+        </div>
+        <div id="error-last" class="error-messages">
+            <p>Please enter your last name</p>
+        </div>
+        <div id="error-email" class="error-messages">
+            <p>Please enter valid email</p>
+        </div>
+        <div id="error-dorm" class="error-messages">
+            <p>Please enter valid dorm</p>
+        </div>
+        <div id="error-year" class="error-messages">
+            <p>Please choose school year</p>
+        </div>
+    </div>
+</body>
+</html>
