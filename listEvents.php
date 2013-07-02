@@ -1,22 +1,39 @@
-<?php 
-	$connection = mysql_connect('server', 'user', 'password');
-	$db = mysql_select_deb('db_name', $connection);
+<?php
+	$connection = mysqli_connect('localhost', 'nuaaivco_event', 'pmh518', 'nuaaivco_events');
 
-	if($connection & $db){
-		$arr = array();
-		$results = mysql_query("SELECT * FROM events_table")
+	$sql = "SELECT * FROM events";
+	$res = mysqli_query($connection, $sql);
 
-		while($object = mysql_fetch_array($results)){
-			$arr[] = $object;
-		}
+	$xml = new XMLWriter();
 
-		$json = '{"sample":' . json_encode($arr) . '}';
-		echo $json;
-	}else{
-		echo 'Error connecting';
+	$xml->openURI("php://output");
+	$xml->startDocument();
+	$xml->setIndent(true);
 
+	$xml->startElement('events');
+
+	while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
+	  $xml->startElement("event");
+
+
+	  $xml->startElement("event_id");
+	  $xml->writeRaw($row['event_id']);
+	  $xml->endElement();
+
+	  $xml->startElement("event_name");
+	  $xml->writeRaw($row['event_name']);
+	  $xml->endElement();
+
+	  $xml->startElement("event_date");
+	  $xml->writeRaw($row['event_date']);
+	  $xml->endElement();
+
+	  $xml->endElement();
 	}
 
+	$xml->endElement();
 
+	header('Content-type: text/xml');
+	$xml->flush();
 
 ?>

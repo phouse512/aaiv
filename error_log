@@ -1,0 +1,41 @@
+[01-Jul-2013 19:45:31 America/New_York] PHP Parse error:  syntax error, unexpected T_WHILE in /home/nuaaivco/public_html/listEvents.php on line 9
+[02-Jul-2013 08:27:00 America/New_York] PHP Parse error:  syntax error, unexpected T_WHILE in /home/nuaaivco/public_html/listEvents.php on line 9
+[02-Jul-2013 08:27:03 America/New_York] PHP Parse error:  syntax error, unexpected T_WHILE in /home/nuaaivco/public_html/listEvents.php on line 9
+[02-Jul-2013 08:27:06 America/New_York] PHP Parse error:  syntax error, unexpected T_WHILE in /home/nuaaivco/public_html/listEvents.php on line 9
+[02-Jul-2013 08:27:07 America/New_York] PHP Parse error:  syntax error, unexpected T_WHILE in /home/nuaaivco/public_html/listEvents.php on line 9
+[02-Jul-2013 08:41:33 America/New_York] PHP Parse error:  syntax error, unexpected '}' in /home/nuaaivco/public_html/listEvents.php on line 19
+[02-Jul-2013 08:41:35 America/New_York] PHP Parse error:  syntax error, unexpected '}' in /home/nuaaivco/public_html/listEvents.php on line 19
+[02-Jul-2013 08:41:37 America/New_York] PHP Parse error:  syntax error, unexpected '}' in /home/nuaaivco/public_html/listEvents.php on line 19
+[02-Jul-2013 08:42:51 America/New_York] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'nuaaivco_house'@'143.95.37.55' (using password: YES) in /home/nuaaivco/public_html/listEvents.php on line 2
+[02-Jul-2013 08:42:51 America/New_York] PHP Warning:  mysql_select_db() expects parameter 2 to be resource, boolean given in /home/nuaaivco/public_html/listEvents.php on line 3
+[02-Jul-2013 08:42:53 America/New_York] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'nuaaivco_house'@'143.95.37.55' (using password: YES) in /home/nuaaivco/public_html/listEvents.php on line 2
+[02-Jul-2013 08:42:53 America/New_York] PHP Warning:  mysql_select_db() expects parameter 2 to be resource, boolean given in /home/nuaaivco/public_html/listEvents.php on line 3
+[02-Jul-2013 08:49:38 America/New_York] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'nuaaivco_event'@'143.95.37.55' (using password: YES) in /home/nuaaivco/public_html/listEvents.php on line 2
+[02-Jul-2013 08:49:38 America/New_York] PHP Warning:  mysql_select_db() expects parameter 2 to be resource, boolean given in /home/nuaaivco/public_html/listEvents.php on line 3
+[02-Jul-2013 08:53:04 America/New_York] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'nuaaivco_event'@'143.95.37.55' (using password: YES) in /home/nuaaivco/public_html/listEvents.php on line 2
+[02-Jul-2013 08:53:04 America/New_York] PHP Warning:  mysql_select_db() expects parameter 2 to be resource, boolean given in /home/nuaaivco/public_html/listEvents.php on line 3
+[02-Jul-2013 08:53:08 America/New_York] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'nuaaivco_event'@'143.95.37.55' (using password: YES) in /home/nuaaivco/public_html/listEvents.php on line 2
+[02-Jul-2013 08:53:08 America/New_York] PHP Warning:  mysql_select_db() expects parameter 2 to be resource, boolean given in /home/nuaaivco/public_html/listEvents.php on line 3
+[02-Jul-2013 08:54:14 America/New_York] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'nuaaivco_event'@'143.95.37.55' (using password: YES) in /home/nuaaivco/public_html/listEvents.php on line 2
+[02-Jul-2013 08:54:14 America/New_York] PHP Warning:  mysql_select_db() expects parameter 2 to be resource, boolean given in /home/nuaaivco/public_html/listEvents.php on line 3
+[02-Jul-2013 08:54:15 America/New_York] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'nuaaivco_event'@'143.95.37.55' (using password: YES) in /home/nuaaivco/public_html/listEvents.php on line 2
+[02-Jul-2013 08:54:15 America/New_York] PHP Warning:  mysql_select_db() expects parameter 2 to be resource, boolean given in /home/nuaaivco/public_html/listEvents.php on line 3
+[02-Jul-2013 08:54:45 America/New_York] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'nuaaivco_event'@'143.95.37.55' (using password: YES) in /home/nuaaivco/public_html/listEvents.php on line 2
+[02-Jul-2013 08:54:45 America/New_York] PHP Warning:  mysql_select_db() expects parameter 2 to be resource, boolean given in /home/nuaaivco/public_html/listEvents.php on line 3
+[02-Jul-2013 09:09:43 America/New_York] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, string given in /home/nuaaivco/public_html/listEvents.php on line 3
+[02-Jul-2013 09:09:43 America/New_York] PHP Catchable fatal error:  Object of class mysqli could not be converted to string in /home/nuaaivco/public_html/listEvents.php on line 18
+[02-Jul-2013 09:09:46 America/New_York] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, string given in /home/nuaaivco/public_html/listEvents.php on line 3
+[02-Jul-2013 09:09:46 America/New_York] PHP Catchable fatal error:  Object of class mysqli could not be converted to string in /home/nuaaivco/public_html/listEvents.php on line 18
+[02-Jul-2013 09:11:11 America/New_York] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, string given in /home/nuaaivco/public_html/listEvents.php on line 3
+[02-Jul-2013 09:11:11 America/New_York] PHP Catchable fatal error:  Object of class mysqli could not be converted to string in /home/nuaaivco/public_html/listEvents.php on line 18
+[02-Jul-2013 09:12:05 America/New_York] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'nuaaivco_event'@'localhost' to database 'nuaaivco_events' in /home/nuaaivco/public_html/listEvents.php on line 2
+[02-Jul-2013 09:12:07 America/New_York] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'nuaaivco_event'@'localhost' to database 'nuaaivco_events' in /home/nuaaivco/public_html/listEvents.php on line 2
+[02-Jul-2013 09:14:37 America/New_York] PHP Catchable fatal error:  Object of class mysqli could not be converted to string in /home/nuaaivco/public_html/listEvents.php on line 16
+[02-Jul-2013 09:14:40 America/New_York] PHP Catchable fatal error:  Object of class mysqli could not be converted to string in /home/nuaaivco/public_html/listEvents.php on line 16
+[02-Jul-2013 09:15:33 America/New_York] PHP Parse error:  syntax error, unexpected T_WHILE in /home/nuaaivco/public_html/listEvents.php on line 7
+[02-Jul-2013 09:25:22 America/New_York] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home/nuaaivco/public_html/listEvents.php on line 25
+[02-Jul-2013 09:25:22 America/New_York] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/nuaaivco/public_html/listEvents.php on line 35
+[02-Jul-2013 09:25:22 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/nuaaivco/public_html/listEvents.php:25) in /home/nuaaivco/public_html/listEvents.php on line 46
+[02-Jul-2013 09:26:53 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, string given in /home/nuaaivco/public_html/listEvents.php on line 25
+[02-Jul-2013 09:26:53 America/New_York] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/nuaaivco/public_html/listEvents.php on line 35
+[02-Jul-2013 09:55:04 America/New_York] PHP Warning:  mysqli_fetch_array() expects at least 1 parameter, 0 given in /home/nuaaivco/public_html/listEvents.php on line 35
