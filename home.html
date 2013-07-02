@@ -6,7 +6,9 @@
     <meta name="description" content="AAIV Attendance">
     <meta name="author" content="HouseWD">
     <link rel="stylesheet" type="text/css" href="project.css" />
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     <script src="jquery2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="jquery.customSelect.min.js"></script>
     <script src="source.js"></script>
     <script>
@@ -14,11 +16,12 @@
             displayEventSelectBox();
             var $cs = $('.styled').customSelect();  
             var $cs2 = $('.styled-event').customSelect({customClass: 'customSelect2'});
-        };
-        $("#button").click(function() {
-                displayEventSelectBox();
+            $("input[type='submit']").click(function(event) {
+                event.preventDefault();
+                submitButton();
             });
-
+        };
+        
     </script>
 </head>
 <body>

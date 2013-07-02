@@ -15,7 +15,6 @@
 	while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
 	  $xml->startElement("event");
 
-
 	  $xml->startElement("event_id");
 	  $xml->writeRaw($row['event_id']);
 	  $xml->endElement();
@@ -30,10 +29,7 @@
 
 	  $xml->endElement();
 	}
-
 	$xml->endElement();
-
 	header('Content-type: text/xml');
 	$xml->flush();
-
 ?>
