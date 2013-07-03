@@ -4,7 +4,7 @@ function displayEventSelectBox(){
 		type: 'GET',
 		success: function(data, textStatus, xhr){
             var events = data.getElementsByTagName("event");
-            var html= '';
+            var html= '<option value="">choose event..</option>';
 
             for (var i=0;i<events.length; i++){
             	id = events[i].getElementsByTagName("event_id")[0].textContent;
@@ -24,6 +24,7 @@ function displayEventSelectBox(){
 
 function submitButton(){
 	hideErrors();
+	valid = 0;
 
 	firstName = $('input[name=firstname]').val();
 	lastName = $('input[name=lastname]').val();
@@ -32,7 +33,10 @@ function submitButton(){
 	year = $('.styled').val();
 	eventName = $('.styled-event').val();
 
-	valid = validateForm(firstName, lastName, emailAddress, year, eventName);
+	valid = validateForm(firstName, lastName, emailAddress, year, eventName, dorm);
+	if(valid < 1){
+		insertUser(firstName, lastName, emailAddress, year, eventName, dorm);
+	}
 }
 
 function validateForm(firstName, lastName, emailAddress, year, eventName){
@@ -64,6 +68,14 @@ function validateForm(firstName, lastName, emailAddress, year, eventName){
 		alert('No event selected');
 	}
 
+    if(isBlank(emailAddress)){
+    	output += 1;
+    	$("#error-email > p").text("Please enter valid email");
+    	if($("#error-email").css("visibility") == "hidden"){
+    		$("#error-email").css("visibility", "visible").hide().fadeIn(2500);
+    	}
+    }
+
 	//INSERT EMAIL VALIDATION HERE
 	$.ajax({
 		url: 'validateEmail.php',
@@ -72,14 +84,18 @@ function validateForm(firstName, lastName, emailAddress, year, eventName){
 		success: function(data, textStatus, xhr){
             console.log(data);
             if(data == "exists"){
+          		$("#error-email > p").text("Email already exists");
             	if($("#error-email").css("visibility") == "hidden"){
             		$("#error-email").css("visibility", "visible").hide().fadeIn(2500);
             	}
+            	output += 1;
             }
+            
 		},
 		error: function(xhr, textStatus, errorThrown){
 			alert(textStatus);
-		}
+		},
+		async: false
 	});
 
 	return output;
@@ -91,28 +107,45 @@ function isBlank(str) {
 
 function hideErrors() {
 	if ($("#error-first").css("visibility") == "visible"){
-		/*$('#error-first').fadeOut(function(){
-			$(this).show().css({visibility:'hidden'});
-		});*/
 		$('#error-first').css({visibility: 'hidden'});
 	}
 
 	if ($("#error-last").css("visibility") == "visible"){
-		/*$('#error-last').fadeOut(function(){
-			$(this).show().css({visibility:'hidden'});
-		});*/
 		$('#error-last').css({visibility: 'hidden'});
 	}
 	if ($("#error-email").css("visibility") == "visible"){
-		/*$('#error-email').fadeOut(function(){
-			$(this).show().css({visibility:'hidden'});
-		});*/
 		$('#error-email').css({visibility: 'hidden'});
 	}
 	if ($("#error-year").css("visibility") == "visible"){
-		/*$('#error-year').fadeOut(function(){
-			$(this).show().css({visibility:'hidden'});
-		});*/
 		$('#error-year').css({visibility: 'hidden'});
 	}
 }
+
+function insertUser(firstName, lastName, emailAddress, year, eventName, dormitory){
+	$.ajax({
+		url: 'createUser.php',
+		type: 'POST',
+		data: ({email: emailAddress,
+				first: firstName,
+				last: lastName,
+				eventID: eventName,
+				study: year,
+				dorm: dormitory}),
+		success: function(data, textStatus, xhr){
+            displayConfirmation();
+
+		},
+		error: function(xhr, textStatus, errorThrown){
+			alert(textStatus);
+		}
+	});
+}
+
+function displayConfirmation(){
+	$('#slick-login').fadeOut(500);
+	$('#success').fadeIn(500);
+
+	$('#success').delay(4000).fadeOut("slow");
+	$('#slick-login').delay(4000).fadeIn("slow");
+}
+
