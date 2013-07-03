@@ -23,7 +23,7 @@ function displayEventSelectBox(){
 }
 
 function submitButton(){
-	//hideErrors();
+	hideErrors();
 
 	firstName = $('input[name=firstname]').val();
 	lastName = $('input[name=lastname]').val();
@@ -33,7 +33,6 @@ function submitButton(){
 	eventName = $('.styled-event').val();
 
 	valid = validateForm(firstName, lastName, emailAddress, year, eventName);
-	hideErrors();
 }
 
 function validateForm(firstName, lastName, emailAddress, year, eventName){
@@ -41,17 +40,23 @@ function validateForm(firstName, lastName, emailAddress, year, eventName){
 
 	if (isBlank(firstName)){
 		output += 1;
-		$("#error-first").css("visibility", "visible").hide().fadeIn(2500);
+		if ($("#error-first").css("visibility") == "hidden"){
+			$("#error-first").css("visibility", "visible").hide().fadeIn(2500);
+		}
 	}
 
 	if (isBlank(lastName)){
 		output += 1;
-		$("#error-last").css("visibility", "visible").hide().fadeIn(2500);
+		if ($("#error-last").css("visibility") == "hidden"){
+			$("#error-last").css("visibility", "visible").hide().fadeIn(2500);
+		}
 	}
 
 	if (year == ""){
 		output += 1;
-		$("#error-year").css("visibility", "visible").hide().fadeIn(2500);
+		if ($("#error-year").css("visibility") == "hidden"){
+			$("#error-year").css("visibility", "visible").hide().fadeIn(2500);
+		}
 	}
 
 	if (eventName == ""){
@@ -60,6 +65,22 @@ function validateForm(firstName, lastName, emailAddress, year, eventName){
 	}
 
 	//INSERT EMAIL VALIDATION HERE
+	$.ajax({
+		url: 'validateEmail.php',
+		type: 'POST',
+		data: ({email: emailAddress}),
+		success: function(data, textStatus, xhr){
+            console.log(data);
+            if(data == "exists"){
+            	if($("#error-email").css("visibility") == "hidden"){
+            		$("#error-email").css("visibility", "visible").hide().fadeIn(2500);
+            	}
+            }
+		},
+		error: function(xhr, textStatus, errorThrown){
+			alert(textStatus);
+		}
+	});
 
 	return output;
 }
@@ -69,17 +90,29 @@ function isBlank(str) {
 }
 
 function hideErrors() {
+	if ($("#error-first").css("visibility") == "visible"){
+		/*$('#error-first').fadeOut(function(){
+			$(this).show().css({visibility:'hidden'});
+		});*/
+		$('#error-first').css({visibility: 'hidden'});
+	}
 
-	$('#error-first').fadeOut(function(){
-		$(this).show().css({visibility:'hidden'});
-	});
-	$('#error-last').fadeOut(function(){
-		$(this).show().css({visibility:'hidden'});
-	});
-	$('#error-email').fadeOut(function(){
-		$(this).show().css({visibility:'hidden'});
-	});
-	$('#error-year').fadeOut(function(){
-		$(this).show().css({visibility:'hidden'});
-	});
+	if ($("#error-last").css("visibility") == "visible"){
+		/*$('#error-last').fadeOut(function(){
+			$(this).show().css({visibility:'hidden'});
+		});*/
+		$('#error-last').css({visibility: 'hidden'});
+	}
+	if ($("#error-email").css("visibility") == "visible"){
+		/*$('#error-email').fadeOut(function(){
+			$(this).show().css({visibility:'hidden'});
+		});*/
+		$('#error-email').css({visibility: 'hidden'});
+	}
+	if ($("#error-year").css("visibility") == "visible"){
+		/*$('#error-year').fadeOut(function(){
+			$(this).show().css({visibility:'hidden'});
+		});*/
+		$('#error-year').css({visibility: 'hidden'});
+	}
 }
