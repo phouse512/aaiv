@@ -89,15 +89,13 @@ function validateForm(firstName, lastName, emailAddress, year, eventName){
             		$("#error-email").css("visibility", "visible").hide().fadeIn(2500);
             	}
             	output += 1;
-            }
-            
+            }      
 		},
 		error: function(xhr, textStatus, errorThrown){
 			alert(textStatus);
 		},
 		async: false
 	});
-
 	return output;
 }
 
@@ -133,7 +131,6 @@ function insertUser(firstName, lastName, emailAddress, year, eventName, dormitor
 				dorm: dormitory}),
 		success: function(data, textStatus, xhr){
             displayConfirmation();
-
 		},
 		error: function(xhr, textStatus, errorThrown){
 			alert(textStatus);
@@ -142,10 +139,17 @@ function insertUser(firstName, lastName, emailAddress, year, eventName, dormitor
 }
 
 function displayConfirmation(){
-	$('#slick-login').fadeOut(500);
-	$('#success').fadeIn(500);
-
+	$('#slick-login').fadeOut(750);
+	$('#success').fadeIn(750);
+	
 	$('#success').delay(4000).fadeOut("slow");
 	$('#slick-login').delay(4000).fadeIn("slow");
+	clearForm();
+}
+
+function clearForm(){
+	firstName = $('input[type=text]').val("");
+	$('#year-select').prop('selectedIndex', 0);
+	$('#year-select').trigger('update');
 }
 
