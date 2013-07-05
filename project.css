@@ -319,3 +319,52 @@ div.styled select {
     -o-animation: login 1s ease-in-out;
     animation: login 1s ease-in-out;
 }
+
+#suggest {
+    display: block;
+    width: 600px;
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -110px;
+    margin-top: -75px;
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+    -webkit-animation: login 1s ease-in-out;
+    -moz-animation: login 1s ease-in-out;
+    -ms-animation: login 1s ease-in-out;
+    -o-animation: login 1s ease-in-out;
+    animation: login 1s ease-in-out;
+    text-align: center;
+}
+
+.user-suggestions {
+    border-radius: 20px;
+    height: 30px;
+    width: 585px;
+    margin-top: 5px;
+    padding-top: 6px;
+    padding-left: 20px;
+    background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #F2F2F2 100%);
+    background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #F2F2F2 100%);
+    background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #F2F2F2 100%);
+    background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #F2F2F2 100%);
+    background-image: linear-gradient(bottom, #FFFFFF 0%, #F2F2F2 100%);
+    -webkit-box-shadow: inset 0px 2px 0px #d9d9d9;
+    box-shadow: inset 0px 2px 0px #d9d9d9;
+    text-align: left;
+    display: inline-block;
+}
+
+.column {
+    width: 15%;
+    text-align: left;
+    display: inline-block;
+}
+
+.column-email {
+    width: 30%;
+    text-align: left;
+    display: inline-block;
+}
