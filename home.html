@@ -20,6 +20,8 @@
                 event.preventDefault();
                 submitButton();
             });
+
+            displayUserSuggestion('<?xml version="1.0" ?> <users><user><user_id>1</user_id><first_name>Philip</first_name><last_name>House</last_name><year>Junior</year><email>philiphose2015@u.northwestern.edu</email></user><user><user_id>2</user_id><first_name>Rich</first_name><last_name>Chang</last_name><year>Senior</year><email>richchan2014@u.northwestern.edu</email></user><user><user_id>3</user_id><first_name>Ted</first_name><last_name>Tae</last_name><year>Junior</year><email>tedtae2015@u.northwestern.edu</email></user></users>');
         };
         
     </script>
@@ -47,7 +49,6 @@
         </form>
         <div id="success">
             <img style="float: center;" src="checkmark.png"> 
-            <strong>Success!</strong>
         </div>
     <div id="error-message-wrapper">
         <div id="error-first" class="error-messages">
@@ -67,12 +68,7 @@
         </div>
     </div>
     <div id="suggest">
-        <div id="user_1" class="user-suggestions">
-                <div class="column">Philip</div><div class = "column">House</div><div class="column">Junior</div><div class="column">philiphose2015@u.northwestern.edu</div>
-        </div>
-        <div id="user_2" class="user-suggestions">
-                <div class="column">Rich</div><div class = "column">Chang</div><div class="column">Senior</div><div class="column">rich.chag0@gmail.com</div>
-        </div>
+
     </div>
 </body>
 </html>

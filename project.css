@@ -352,9 +352,45 @@ div.styled select {
     background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #F2F2F2 100%);
     background-image: linear-gradient(bottom, #FFFFFF 0%, #F2F2F2 100%);
     -webkit-box-shadow: inset 0px 2px 0px #d9d9d9;
+    background-image: #DDDDDD;
     box-shadow: inset 0px 2px 0px #d9d9d9;
     text-align: left;
     display: inline-block;
+}
+
+div.user-suggestions:hover {
+    background-image: -webkit-linear-gradient(bottom, #F2F2F2 50%, #DDDDDD 100%);
+    background-image: -moz-linear-gradient(bottom, #F2F2F2 50%, #DDDDDD 100%);
+    background-image: -o-linear-gradient(bottom, #F2F2F2 50%, #DDDDDD 100%);
+    background-image: -ms-linear-gradient(bottom, #F2F2F2 50%, #DDDDDD 100%);
+    background-image: linear-gradient(bottom, #F2F2F2 50%, #DDDDDD 100%);
+}
+
+.user-suggestions-bottom {
+    border-radius: 20px;
+    height: 30px;
+    width: 585px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 6px;
+    padding-left: 20px;
+    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #F2F2F2 100%);
+    background-image: -moz-linear-gradient(top, #FFFFFF 0%, #F2F2F2 100%);
+    background-image: -o-linear-gradient(top, #FFFFFF 0%, #F2F2F2 100%);
+    background-image: -ms-linear-gradient(top, #FFFFFF 0%, #F2F2F2 100%);
+    background-image: linear-gradient(top, #FFFFFF 0%, #F2F2F2 100%);
+    -webkit-box-shadow: inset 0px 2px 0px #d9d9d9;
+    box-shadow: inset 0px 2px 0px #d9d9d9;
+    text-align: left;
+    display: inline-block;
+}
+
+div.user-suggestions-bottom:hover {
+    background-image: -webkit-linear-gradient(bottom, #F2F2F2 50%, #DDDDDD 100%);
+    background-image: -moz-linear-gradient(bottom, #F2F2F2 50%, #DDDDDD 100%);
+    background-image: -o-linear-gradient(bottom, #F2F2F2 50%, #DDDDDD 100%);
+    background-image: -ms-linear-gradient(bottom, #F2F2F2 50%, #DDDDDD 100%);
+    background-image: linear-gradient(bottom, #F2F2F2 50%, #DDDDDD 100%);
 }
 
 .column {

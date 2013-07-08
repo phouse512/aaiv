@@ -153,3 +153,29 @@ function clearForm(){
 	$('#year-select').trigger('update');
 }
 
+function displayUserSuggestion(xmlString){
+
+	var parseXml;
+	
+	parseXml = $.parseXML(xmlString);
+	
+    users = parseXml.getElementsByTagName("user");
+    var html= '';
+
+  
+
+    for (var i=0;i<users.length; i++){
+    	id = users[i].getElementsByTagName("user_id")[0].textContent;
+    	firstName = users[i].getElementsByTagName("first_name")[0].textContent;
+    	lastName = users[i].getElementsByTagName("last_name")[0].textContent;
+    	year = users[i].getElementsByTagName("year")[0].textContent;
+    	email = users[i].getElementsByTagName("email")[0].textContent;
+    	if (i == (users.length-1)){
+    		html += '<div id="user_' + id + '" class="user-suggestions-bottom"><div class="column">' + firstName + '</div><div class = "column">' + lastName + '</div><div class="column">' + year + '</div><div class="column">' + email + '</div></div>';
+    	} else{
+    		html += '<div id="user_' + id + '" class="user-suggestions"><div class="column">' + firstName + '</div><div class = "column">' + lastName + '</div><div class="column">' + year + '</div><div class="column">' + email + '</div></div>';
+    	}
+    }
+    select = $("#suggest");
+    $(select).html(html);
+}
