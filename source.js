@@ -32,44 +32,53 @@ function submitButton(){
 	dorm = $('input[name=dorm]').val();
 	year = $('.styled').val();
 	eventName = $('.styled-event').val();
+	alert(eventName);
 
 	valid = validateForm(firstName, lastName, emailAddress, year, eventName, dorm);
-	if(valid < 1){
+	if(valid[0] < 1){
 		insertUser(firstName, lastName, emailAddress, year, eventName, dorm);
+	} else if( valid[0] == 10){
+		updateAttendance(valid[1], eventName);
 	}
 }
 
+function updateAttendance(userID, eventID){
+	alert(userID);
+	alert(eventID);
+}
+
 function validateForm(firstName, lastName, emailAddress, year, eventName){
-	output = 0;
+	var output = new Array();
+	output[0] = 0;
 
 	if (isBlank(firstName)){
-		output += 1;
+		output[0] += 1;
 		if ($("#error-first").css("visibility") == "hidden"){
 			$("#error-first").css("visibility", "visible").hide().fadeIn(2500);
 		}
 	}
 
 	if (isBlank(lastName)){
-		output += 1;
+		output[0] += 1;
 		if ($("#error-last").css("visibility") == "hidden"){
 			$("#error-last").css("visibility", "visible").hide().fadeIn(2500);
 		}
 	}
 
 	if (year == ""){
-		output += 1;
+		output[0] += 1;
 		if ($("#error-year").css("visibility") == "hidden"){
 			$("#error-year").css("visibility", "visible").hide().fadeIn(2500);
 		}
 	}
 
 	if (eventName == ""){
-		output += 1;
+		output[0] += 1;
 		alert('No event selected');
 	}
 
     if(isBlank(emailAddress)){
-    	output += 1;
+    	output[0] += 1;
     	$("#error-email > p").text("Please enter valid email");
     	if($("#error-email").css("visibility") == "hidden"){
     		$("#error-email").css("visibility", "visible").hide().fadeIn(2500);
@@ -83,12 +92,9 @@ function validateForm(firstName, lastName, emailAddress, year, eventName){
 		data: ({email: emailAddress}),
 		success: function(data, textStatus, xhr){
             console.log(data);
-            if(data == "exists"){
-          		$("#error-email > p").text("Email already exists");
-            	if($("#error-email").css("visibility") == "hidden"){
-            		$("#error-email").css("visibility", "visible").hide().fadeIn(2500);
-            	}
-            	output += 1;
+            if(data != "none"){
+            	output[0] = 10;
+            	output[1] = data;
             }      
 		},
 		error: function(xhr, textStatus, errorThrown){
@@ -154,15 +160,8 @@ function clearForm(){
 }
 
 function displayUserSuggestion(xmlString){
-
-	var parseXml;
-	
-	parseXml = $.parseXML(xmlString);
-	
-    users = parseXml.getElementsByTagName("user");
+    users = xmlString.getElementsByTagName("user");
     var html= '';
-
-  
 
     for (var i=0;i<users.length; i++){
     	id = users[i].getElementsByTagName("user_id")[0].textContent;
@@ -178,4 +177,27 @@ function displayUserSuggestion(xmlString){
     }
     select = $("#suggest");
     $(select).html(html);
+}
+
+function onChange(){
+	firstName = $('input[name=firstname]').val();
+	lastName = $('input[name=lastname]').val();
+	emailAddress = $('input[name=email]').val();
+	year = $('.styled').val();
+
+	$.ajax({
+		url: 'userSuggestion.php',
+		type: 'POST',
+		data: ({email: emailAddress,
+				first_name: firstName,
+				last_name: lastName,
+				year: year}),
+		success: function(data, textStatus, xhr){
+			$("#suggest").html('');
+            displayUserSuggestion(data);
+		},
+		error: function(xhr, textStatus, errorThrown){
+			alert(textStatus);
+		}
+	});
 }

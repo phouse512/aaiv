@@ -7,7 +7,8 @@
 	$res = mysqli_query($connection, $sql);
 
 	if(mysqli_num_rows($res) > 0){
-		echo "exists";
+		$row = mysqli_fetch_array($res, MYSQLI_ASSOC);
+		echo $row['user_id'];
 	}else{
 		echo "none";
 	}
