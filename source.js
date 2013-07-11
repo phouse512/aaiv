@@ -1,3 +1,5 @@
+var currentSuggest = 2;
+
 function displayEventSelectBox(){
 	$.ajax({
 		url: 'listEvents.php',
@@ -175,8 +177,30 @@ function displayUserSuggestion(xmlString){
     		html += '<div id="user_' + id + '" class="user-suggestions"><div class="column">' + firstName + '</div><div class = "column">' + lastName + '</div><div class="column">' + year + '</div><div class="column">' + email + '</div></div>';
     	}
     }
-    select = $("#suggest");
+
+    select = $("#suggest1");
     $(select).html(html);
+    select.stop(true,true).slideToggle(600, "swing");
+    select.stop(true,true).slideToggle(600, "swing");
+
+
+    /*if (currentSuggest == 2){
+    	select = $("#suggest1");
+    	select2 = $("#suggest2");
+    	$(select).html(html);
+    	$(select2).html(html);
+    	select.stop(true,true).fadeToggle(750, "swing");
+    	select2.stop(true,true).fadeToggle(750, "swing");
+    	currentSuggest = 1;
+    } else{
+    	select = $("#suggest2");
+    	select2 = $("#suggest1");
+    	$(select).html(html);
+    	$(select2).html(html);
+    	select.stop(true,true).fadeToggle(750, "swing");
+    	select2.stop(true,true).fadeToggle(750, "swing");
+    	currentSuggest = 2;
+    }*/
 }
 
 function onChange(){
