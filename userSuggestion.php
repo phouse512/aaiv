@@ -54,6 +54,10 @@
 	  $xml->writeRaw($row['email']);
 	  $xml->endElement();
 
+	  $xml->startElement("dorm");
+	  $xml->writeRaw($row['dorm']);
+	  $xml->endElement();
+
 	  $xml->endElement();
 	}
 	$xml->endElement();

@@ -27,6 +27,23 @@
             $('input').on('input', $.debounce(function(){
                 onChange();
             }, 300));
+            
+            $("#suggest1").delegate("div", "click", function(){
+                first = $(this).children(':nth-child(1)').text();
+                last = $(this).children(':nth-child(2)').text();
+                email = $(this).children(':nth-child(4)').text();
+                dorm = $(this).children(':nth-child(5)').text();
+                year = $(this).children(':nth-child(3)').text();
+                console.log($(this).children(':nth-child(1)').text());
+                autoPopulate(first, last, email, dorm, year);
+
+                if ($(".selectedSuggestion")[0]){
+                    $(".selectedSuggestion").removeClass('selectedSuggestion');
+                    $(this).addClass('selectedSuggestion');
+                } else {
+                    $(this).addClass('selectedSuggestion');
+                }
+            });
         };       
     </script>
 </head>

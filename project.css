@@ -401,6 +401,16 @@ div.user-suggestions-bottom:hover {
     background-image: linear-gradient(bottom, #F2F2F2 50%, #DDDDDD 100%);
 }
 
+.selectedSuggestion {
+    border: 2px solid #B1B1B1;
+    padding-top: 4px;
+    background-image: -webkit-linear-gradient(bottom, #F2F2F2 50%, #DDDDDD 100%);
+    background-image: -moz-linear-gradient(bottom, #F2F2F2 50%, #DDDDDD 100%);
+    background-image: -o-linear-gradient(bottom, #F2F2F2 50%, #DDDDDD 100%);
+    background-image: -ms-linear-gradient(bottom, #F2F2F2 50%, #DDDDDD 100%);
+    background-image: linear-gradient(bottom, #F2F2F2 50%, #DDDDDD 100%);
+}
+
 .column {
     width: 15%;
     text-align: left;
@@ -411,4 +421,8 @@ div.user-suggestions-bottom:hover {
     width: 30%;
     text-align: left;
     display: inline-block;
+}
+
+.hidden-dorm {
+    display: none;
 }
