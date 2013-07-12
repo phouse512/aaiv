@@ -2,8 +2,8 @@
 CSS RESET
 http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
-License:  none (public domain)
- */
+License: none (public domain)
+*/
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
     margin: 0;
     padding: 0;
@@ -153,7 +153,7 @@ body {
 
 div.styled {
     overflow:hidden; /* this hides the select's drop button */
-    padding:0; 
+    padding:0;
     margin:0;
     background: white url(formelements-select.png) no-repeat bottom right;
     width:14em; border-radius:2px;
@@ -171,7 +171,7 @@ div.styled select {
     padding:0.3em 0.5em; /* padding should be added to the select, not the div */
 }
 
-.customSelect { 
+.customSelect {
     margin-top: 7px;
     font-size:14px;
     padding-top: 10px;
@@ -243,7 +243,7 @@ div.styled select {
     background-image: -moz-linear-gradient(bottom, #FFB2B2 0%, #FF8080 100%);
     background-image: -o-linear-gradient(bottom, #FFB2B2 0%, #FF8080 100%);
     background-image: -ms-linear-gradient(bottom, #FFB2B2 0%, #FF8080 100%);
-    background-image: linear-gradient(bottom, #FFB2B2 0%,  #FF8080 100%);
+    background-image: linear-gradient(bottom, #FFB2B2 0%, #FF8080 100%);
     outline: none;
 }
 
@@ -251,7 +251,7 @@ div.styled select {
     width: 220px;
     height: 155px;
     position: absolute;
-    left: 50%;
+    left: 40%;
     top: 25%;
     margin-left: -110px;
     margin-top: -75px;
@@ -262,7 +262,7 @@ div.styled select {
     animation: login 1s ease-in-out;
 }
 
-.customSelect2 { 
+.customSelect2 {
     margin-top: 7px;
     font-size:18px;
     padding-top: 8px;
@@ -325,7 +325,7 @@ div.styled select {
     width: 600px;
     
     position: absolute;
-    left: 65%;
+    left: 60%;
     top: 50%;
     margin-left: -110px;
     margin-top: -75px;
@@ -459,11 +459,11 @@ div.user-suggestions-bottom:hover {
 }
 #button-clear:hover {
     background-color: #5f73e9;
-    background-image: -webkit-linear-gradient(bottom, #BF3333 0%, #AC1919 100%);
-    background-image: -moz-linear-gradient(bottom, #BF3333 0%, #AC1919 100%);
-    background-image: -o-linear-gradient(bottom, #BF3333 0%, #AC1919 100%);
-    background-image: -ms-linear-gradient(bottom, #BF3333 0%, #AC1919 100%);
-    background-image: linear-gradient(bottom, #BF3333 0%, #AC1919 100%);
+    background-image: -webkit-linear-gradient(bottom, #BF3333 0%, #AC1919 80%);
+    background-image: -moz-linear-gradient(bottom, #BF3333 0%, #AC1919 80%);
+    background-image: -o-linear-gradient(bottom, #BF3333 0%, #AC1919 80%);
+    background-image: -ms-linear-gradient(bottom, #BF3333 0%, #AC1919 80%);
+    background-image: linear-gradient(bottom, #BF3333 0%, #AC1919 80%);
     -webkit-box-shadow: inset 0px 1px 0px #800000;
     box-shadow: inset 0px 1px 0px #800000;
     margin-top: 9px;

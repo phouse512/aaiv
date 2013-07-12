@@ -45,12 +45,7 @@
                 } else {
                     $("#button-clear").fadeIn(1000);
                 }
-            }, 500);
-
-
-
-            
-            
+            }, 500);            
             $("#suggest1").delegate("div", "click", function(){
                 first = $(this).children(':nth-child(1)').text();
                 last = $(this).children(':nth-child(2)').text();
@@ -76,6 +71,7 @@
                 <option value="">choose event..</option>
             </select>
         </div>
+        <div id="app">
         <form id="slick-login">
             <label for="firstname">firstname</label><input type="text" name="firstname" class="placeholder" placeholder="first name..">
             <label for="lastname">lastname</label><input type="text" name="lastname" class="placeholder" placeholder="last name..">
@@ -117,5 +113,6 @@
     <div id="suggest1" class="suggest">
 
     </div>
+</div>
 </body>
 </html>
