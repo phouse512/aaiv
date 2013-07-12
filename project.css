@@ -100,7 +100,7 @@ body {
 #slick-login input:first-child {
     margin-top: 0px;
 }
-#slick-login input[type="submit"] {
+#button-submit {
     width: 100%;
     height: 50px;
     margin-top: 7px;
@@ -129,7 +129,7 @@ body {
     -ms-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out;
 }
-#slick-login input[type="submit"]:hover {
+#button-submit:hover {
     background-color: #5f73e9;
     background-image: -webkit-linear-gradient(bottom, #5f73e9 0%, #859bef 100%);
     background-image: -moz-linear-gradient(bottom, #5f73e9 0%, #859bef 100%);
@@ -140,7 +140,7 @@ body {
     box-shadow: inset 0px 1px 0px #aab9f4;
     margin-top: 10px;
 }
-#slick-login input[type="submit"]:active {
+#button-submit:active {
     background-color: #7588e1;
     background-image: -webkit-linear-gradient(bottom, #7588e1 0%, #7184df 100%);
     background-image: -moz-linear-gradient(bottom, #7588e1 0%, #7184df 100%);
@@ -425,4 +425,56 @@ div.user-suggestions-bottom:hover {
 
 .hidden-dorm {
     display: none;
+}
+
+#button-clear {
+    display: none;
+    width: 100%;
+    height: 30px;
+    margin-top: 7px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    /*text-shadow: 0px -1px 0px #5b6ddc; */
+    outline: none;
+    border: .5px solid #000000;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    border-radius: 6px;
+    background-color: #A60000;
+    background-image: -webkit-linear-gradient(top, #BF3333 0%, #A60000 100%);
+    background-image: -moz-linear-gradient(top, #BF3333 0%, #A60000 100%);
+    background-image: -o-linear-gradient(top, #BF3333 0%, #A60000 100%);
+    background-image: -ms-linear-gradient(top, #BF3333 0%, #A60000 100%);
+    background-image: linear-gradient(top, #BF3333 0%, #A60000 100%);
+    -webkit-box-shadow: inset 0px 1px 0px #A60000;
+    box-shadow: inset 0px 1px 0px #A60000;
+    cursor: pointer;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+#button-clear:hover {
+    background-color: #5f73e9;
+    background-image: -webkit-linear-gradient(bottom, #BF3333 0%, #AC1919 100%);
+    background-image: -moz-linear-gradient(bottom, #BF3333 0%, #AC1919 100%);
+    background-image: -o-linear-gradient(bottom, #BF3333 0%, #AC1919 100%);
+    background-image: -ms-linear-gradient(bottom, #BF3333 0%, #AC1919 100%);
+    background-image: linear-gradient(bottom, #BF3333 0%, #AC1919 100%);
+    -webkit-box-shadow: inset 0px 1px 0px #800000;
+    box-shadow: inset 0px 1px 0px #800000;
+    margin-top: 9px;
+}
+#button-clear:active {
+    background-color: #7588e1;
+    background-image: -webkit-linear-gradient(top, #BF3333 0%, #A60000 100%);
+    background-image: -moz-linear-gradient(top, #BF3333 0%, #A60000 100%);
+    background-image: -o-linear-gradient(top, #BF3333 0%, #A60000 100%);
+    background-image: -ms-linear-gradient(top, #BF3333 0%, #A60000 100%);
+    background-image: linear-gradient(top, #BF3333 0%, #A60000 100%);
+    -webkit-box-shadow: inset 0px 1px 0px #800000;
+    box-shadow: inset 0px 1px 0px #800000;
 }

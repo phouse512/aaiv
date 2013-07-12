@@ -17,9 +17,14 @@
             displayEventSelectBox();
             var $cs = $('.styled').customSelect();  
             var $cs2 = $('.styled-event').customSelect({customClass: 'customSelect2'});
-            $("input[type='submit']").click(function(event) {
+            $("#button-submit").click(function(event) {
                 event.preventDefault();
                 submitButton();
+            });
+            $("#button-clear").click(function(event){
+                event.preventDefault();
+                clearForm();
+                $("#button-clear").fadeOut(1000);
             });
             $('#year-select').change(function() {
                 onChange();
@@ -27,6 +32,24 @@
             $('input').on('input', $.debounce(function(){
                 onChange();
             }, 300));
+
+            window.setInterval(function(){
+                firstName = $('input[name=firstname]').val();
+                lastName = $('input[name=lastname]').val();
+                emailAddress = $('input[name=email]').val();
+                dorm = $('input[name=dorm]').val();
+                year = $('.styled').val();
+                
+                if (isBlank(firstName) && isBlank(lastName) && isBlank(emailAddress) && isBlank(dorm) && year == ""){
+                    $("#button-clear").fadeOut(1000);
+                } else {
+                    $("#button-clear").fadeIn(1000);
+                }
+            }, 500);
+
+
+
+            
             
             $("#suggest1").delegate("div", "click", function(){
                 first = $(this).children(':nth-child(1)').text();
@@ -66,7 +89,10 @@
                 <option value="senior">Senior</option>
                 <option value="other">Other</option>
             </select>
-            <input id="button" type="submit" value="Submit">
+            <input id="button-submit" type="submit" value="Submit">
+            
+            <input id="button-clear" type="submit" value="Clear">
+           
         </form>
         <div id="success">
             <img style="float: center;" src="checkmark.png"> 
