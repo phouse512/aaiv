@@ -1,28 +1,28 @@
 <html>
 	<body>
 		<div id='attendance-form'>
-			<form>
+			<%= form_tag do %>
 				<div id='firstname-field'>
-					<label for="firstname" class='form-label'>firstname</label>
+					<%= label_tag('firstname','First Name', class:'form-label') %>
 					<input type="text" name="firstname" class="input-field" placeholder="first name..">
 				</div>
 
 				<div id='lastname-field'>
-	      	<label for="lastname" class='form-label'>lastname</label>
+	      	<%= label_tag('lastname','Last Name', class:'form-label') %>
 	      	<input type="text" name="lastname" class="input-field" placeholder="last name..">
 	      </div>
 
 	      <div id='email-field'
-	      	<label for="email" class='form-label'>username</label>
+	      	<%= label_tag('email','Email', class:'form-label') %>
 	      	<input type="text" name="email" class="input-field" placeholder="myemail@u.north..">
 	      </div>
 
 	      <div id='dorm-field'>
-		      <label for="dorm" class='form-label'>dorm</label>
+		      <%= label_tag('dorm','Dorm', class:'form-label') %>
 		      <input type="text" name="dorm" class="input-field" placeholder="dorm..">
 		    </div>
 		    <div id='year-field'>       
-		      <select id="year-select" class="styled input-field">
+		      <select id="year-select" class="styled ginput-field">
 		        <option value="">choose year..</option>
 		        <option value="freshman">Freshman</option>
 		        <option value="sophomore">Sophomore</option>
@@ -31,7 +31,8 @@
 		        <option value="other">Other</option>
 		      </select>
 		    </div>
-			</form>
+		    <input id="button-submit" type="submit" value="Submit">
+			<% end %>
 		</div>
 	</body>
 </html>
