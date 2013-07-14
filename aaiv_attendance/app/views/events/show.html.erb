@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Focus:</strong>
+  <%= @event.focus_id %>
+</p>
+
+<p>
+  <strong>Focus date:</strong>
+  <%= @event.focus_date %>
+</p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @event.topic %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @event.person_id %>
+</p>
+
+<p>
+  <strong>Attendance:</strong>
+  <%= @event.attendance %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

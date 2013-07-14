@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  focus_id: 1
+  focus_date: 2013-07-14
+  topic: MyString
+  person_id: 1
+  attendance: 1
+
+two:
+  focus_id: 1
+  focus_date: 2013-07-14
+  topic: MyString
+  person_id: 1
+  attendance: 1
