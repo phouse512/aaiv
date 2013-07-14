@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  graduationYear: 1
+  person: 
+
+two:
+  graduationYear: 1
+  person: 

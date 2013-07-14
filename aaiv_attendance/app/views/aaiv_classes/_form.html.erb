@@ -1,0 +1,25 @@
+<%= form_for(@aaiv_class) do |f| %>
+  <% if @aaiv_class.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aaiv_class.errors.count, "error") %> prohibited this aaiv_class from being saved:</h2>
+
+      <ul>
+      <% @aaiv_class.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :graduationYear %><br>
+    <%= f.number_field :graduationYear %>
+  </div>
+  <div class="field">
+    <%= f.label :person %><br>
+    <%= f.text_field :person %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

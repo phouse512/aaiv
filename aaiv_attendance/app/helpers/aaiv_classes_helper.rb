@@ -1,0 +1,2 @@
+module AaivClassesHelper
+end

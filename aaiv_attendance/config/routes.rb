@@ -1,4 +1,6 @@
 AaivAttendance::Application.routes.draw do
+  resources :aaiv_classes
+
   get "welcome/index"
   resources :events
 

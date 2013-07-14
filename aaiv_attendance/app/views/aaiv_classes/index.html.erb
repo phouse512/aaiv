@@ -1,0 +1,29 @@
+<h1>Listing aaiv_classes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Graduationyear</th>
+      <th>Person</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aaiv_classes.each do |aaiv_class| %>
+      <tr>
+        <td><%= aaiv_class.graduationYear %></td>
+        <td><%= aaiv_class.person %></td>
+        <td><%= link_to 'Show', aaiv_class %></td>
+        <td><%= link_to 'Edit', edit_aaiv_class_path(aaiv_class) %></td>
+        <td><%= link_to 'Destroy', aaiv_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aaiv class', new_aaiv_class_path %>
