@@ -1,6 +1,6 @@
 <?php
 	$connection = mysqli_connect('localhost', 'nuaaivco_event', 'pmh518', 'nuaaivco_events');
-
+	// host username pwd dbname
 	$sql = "SELECT * FROM events";
 	$res = mysqli_query($connection, $sql);
 
