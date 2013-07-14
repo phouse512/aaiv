@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  firstname: MyString
+  lastname: MyString
+  dorm: MyString
+  year: MyString
+  focus_date: 2013-07-13
+
+two:
+  id: 1
+  firstname: MyString
+  lastname: MyString
+  dorm: MyString
+  year: MyString
+  focus_date: 2013-07-13
