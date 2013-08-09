@@ -13,7 +13,7 @@
 		//echo "successful insert " . mysqli_insert_id($connection);
 		$user_id = mysqli_insert_id($connection);
 		
-		$sql_attendance = "INSERT INTO attendance (user_id, event_id, status) VALUES(". $user_id .", ". $eventID .", 1)";
+		$sql_attendance = "INSERT INTO attendance (user_id, event_id, status, first_time) VALUES(". $user_id .", ". $eventID .", 1, 1)";
 		if($res2 = mysqli_query($connection, $sql_attendance)){
 			echo "success";
 		}

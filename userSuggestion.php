@@ -19,6 +19,8 @@
         $query .= "WHERE " . implode (' AND ', $conditions); // you can change to 'OR', but I suggest to apply the filters cumulative
     }
 
+    $query .= " LIMIT 15";
+
 	$connection = mysqli_connect('localhost', 'nuaaivco_event', 'pmh518', 'nuaaivco_events');
 
 	$res = mysqli_query($connection, $query);

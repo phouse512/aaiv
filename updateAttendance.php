@@ -4,8 +4,9 @@
 
 	$connection = mysqli_connect('localhost', 'nuaaivco_event', 'pmh518', 'nuaaivco_events');
 
-	$sql_attendance = "INSERT INTO attendance (user_id, event_id, status) VALUES(". $user_id .", ". $eventID .", 1)";
+	$sql_attendance = "INSERT INTO attendance (user_id, event_id, status) VALUES(". $user_id .", ". $event_id .", 1)";
 	if($res2 = mysqli_query($connection, $sql_attendance)){
 		echo "success";
 	}
+	echo $sql_attendance;
 ?>

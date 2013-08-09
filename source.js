@@ -50,6 +50,7 @@ function updateAttendance(userID, eventID){
 		data: ({userID: userID,
 				eventID: eventID}),
 		success: function(data, textStatus, xhr){
+			console.log(data);
 			displayConfirmation();
 		},
 		error: function(xhr, textStatus, errorThrown){
